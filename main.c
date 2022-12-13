@@ -22,6 +22,19 @@ int main() {
   assert(checkTemperatureRange(40) == 1);
   assert(checkTemperatureRange(-1) == 0);
   
+  // Test soc range check function
+  assert(checkSocRange(19.5) == 0);
+  assert(checkSocRange(20) == 1);
+  assert(checkSocRange(40) == 1);
+  assert(checkSocRange(80) == 1);
+  assert(checkSocRange(82) == 0);
+  
+  // Test charge Rate check function
+  assert(checkChargeRateRange(0.1) == 1);
+  assert(checkChargeRateRange(0.8) == 1);
+  assert(checkChargeRateRange(0.9) == 0);
+  assert(checkChargeRateRange(1.0) == 0);
+  
   
   
   return 0;
