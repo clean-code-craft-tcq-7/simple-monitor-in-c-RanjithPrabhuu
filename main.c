@@ -31,7 +31,7 @@ int main() {
   
   // Test charge Rate check function
   assert(checkChargeRateRange(0.1) == 1);
-  assert(checkChargeRateRange(0.8) == 1);
+  assert(checkChargeRateRange(0.81) == 0);
   assert(checkChargeRateRange(0.9) == 0);
   assert(checkChargeRateRange(1.0) == 0);
   
