@@ -7,14 +7,10 @@
 int batteryIsOk(float temperature, float soc, float chargeRate) 
 {
     int returnStatus = 0;
-    int retTemperatureInrangeStatus = 0;
-    int retSocInrangeStatus = 0;
-    int retChargeRateInrangeStatus = 0;
   
-    retTemperatureInrangeStatus = checkTemperatureRange(temperature);
-    retSocInrangeStatus = (retTemperatureInrangeStatus & checkSocRange(soc));
-    retChargeRateInrangeStatus = (retSocInrangeStatus & checkChargeRateRange(chargeRate));
-    returnStatus  = retChargeRateInrangeStatus;
+    returnStatus = checkTemperatureRange(temperature);
+    returnStatus = (returnStatus & checkSocRange(soc));
+    returnStatus = (returnStatus & checkChargeRateRange(chargeRate));
     
     return returnStatus;
  } 
