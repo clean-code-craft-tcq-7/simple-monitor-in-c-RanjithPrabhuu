@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
+#include "checker.h"
+#include "checkFunctions.h"
 
+//function declaration for battery is ok check 
 int batteryIsOk(float temperature, float soc, float chargeRate) 
 {
     int retTemperatureInrangeStatus = 1;
@@ -16,8 +19,3 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
     else
         return 0;
  } 
-  
-int main() {
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
-}
