@@ -10,9 +10,9 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
     int retSocInrangeStatus = 1;
     int retChargeRateInrangeStatus = 1;
   
-    retTemperatureInrangeStatus = checkTemperatureInRange(temperature);
-    retSocInrangeStatus = checkSocInRange(soc);
-    retChargeRateInrangeStatus = checkChargeRateInRange(chargeRate);
+    retTemperatureInrangeStatus = checkTemperatureRange(temperature);
+    retSocInrangeStatus = checkSocRange(soc);
+    retChargeRateInrangeStatus = checkChargeRateRange(chargeRate);
   
     if((retTemperatureInrangeStatus == 1) && (retSocInrangeStatus == 1) && (retChargeRateInrangeStatus == 1))
         return 1;
