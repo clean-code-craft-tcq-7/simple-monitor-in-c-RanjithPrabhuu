@@ -35,7 +35,5 @@ int main() {
   assert(checkChargeRateRange(0.9) == 0);
   assert(checkChargeRateRange(1.0) == 0);
   
-  
-  
   return 0;
 }
