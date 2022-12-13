@@ -16,8 +16,8 @@ int main() {
   assert(batteryIsOk(35, 78, 0.9) == 0);
   
   // Test temperature range check function 
-  assert(checkTemperatureRange(30) == 1);
-  assert(checkTemperatureRange(42) == 0);
+  assert(checkTemperatureRange(42) == 1);
+  assert(checkTemperatureRange(47) == 0);
   assert(checkTemperatureRange(0) == 1);
   assert(checkTemperatureRange(40) == 1);
   assert(checkTemperatureRange(-1) == 0);
