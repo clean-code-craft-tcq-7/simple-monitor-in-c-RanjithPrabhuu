@@ -6,12 +6,12 @@
 //function declaration for battery is ok check 
 int batteryIsOk(float temperature, float soc, float chargeRate) 
 {
-    int returnStatus = 1;
-    int retTemperatureInrangeStatus = 1;
-    int retSocInrangeStatus = 1;
-    int retChargeRateInrangeStatus = 1;
+    int returnStatus = 0;
+    int retTemperatureInrangeStatus = 0;
+    int retSocInrangeStatus = 0;
+    int retChargeRateInrangeStatus = 0;
   
-    retTemperatureInrangeStatus = (returnStatus & checkTemperatureRange(temperature));
+    retTemperatureInrangeStatus = checkTemperatureRange(temperature);
     retSocInrangeStatus = (retTemperatureInrangeStatus & checkSocRange(soc));
     retChargeRateInrangeStatus = (retSocInrangeStatus & checkChargeRateRange(chargeRate));
     returnStatus  = retChargeRateInrangeStatus;
