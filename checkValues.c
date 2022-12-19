@@ -3,22 +3,30 @@
 
 int checkOutsideBoundary(float min, float max, float value)
 {
+	int retVal =  2;
 	if(value < min)
 	{
-		return 0;
+		retVal = 0;
 	}
 	else if(value > max)
 	{
-		return 1;
+		retVal = 1;
 	}
+	return retVal;
 }
 
 int checkRange(float min, float max, float value)
 {
+	int retVal =  0;
 	if((value < min) || (value > max))
 	{
-		return 1;
+		retVal =  1;
 	}
+	else
+	{
+		retVal =  0;
+	}	
+	return retVal;
 }
 
 valueRange checkMinMaxBreach(float min, float max, float value)
@@ -73,6 +81,5 @@ valueRange checkValueRange(float min, float max, float value, float tolerance,in
 		returnValue = checkWarning(minTolerance,maxTolerance,value);
 	}
 	
-	return returnValue;
-		
+	return returnValue;	
 }
