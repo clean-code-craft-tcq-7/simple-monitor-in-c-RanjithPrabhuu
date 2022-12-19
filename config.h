@@ -1,6 +1,6 @@
 typedef enum{
 	ENGLISH,
-	GERMAN,
+	FRENCH,
 	MAX_LANGUAGE_SUPRTD,
 }langType;
 
@@ -10,4 +10,4 @@ typedef enum{
 #define SOC_MIN 20
 #define SOC_MAX 80
 
-#define CHARGE_RATE_MAX\ 0.8
+#define CHARGE_RATE_MAX 0.8
