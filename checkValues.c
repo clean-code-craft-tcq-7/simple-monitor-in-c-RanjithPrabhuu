@@ -1,4 +1,4 @@
-#inlcude <stdio.h>
+#include <stdio.h>
 #include "checkValues.h"
 
 int checkRange(float min, float max, float value)
