@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include "checkValues.h"
 
+int checkOutsideBoundary(float min, float max, float value)
+{
+	if(value < min)
+	{
+		return 0;
+	}
+	else if(value > max)
+	{
+		return 1;
+	}
+}
+
 int checkRange(float min, float max, float value)
 {
 	if((value < min) || (value > max))
@@ -12,7 +24,7 @@ int checkRange(float min, float max, float value)
 valueRange checkMinMaxBreach(float min, float max, float value)
 {
 	valueRange returnValue = NORMAL;
-	int boundaryOutsideRetVal = checkRange(min, max, value);
+	int boundaryOutsideRetVal = checkOutsideBoundary(min, max, value);
 	
 	if(boundaryOutsideRetVal == 0)
 	{
@@ -30,7 +42,7 @@ valueRange checkWarning(float minTolerance,float maxTolerance, float value)
 {
 	valueRange returnValue = NORMAL;
 	
-	int boundaryOutsideRetVal = checkRange(minTolerance, maxTolerance, value);
+	int boundaryOutsideRetVal = checkOutsideBoundary(minTolerance, maxTolerance, value);
 	
 	if(boundaryOutsideRetVal == 0)
 	{
@@ -56,9 +68,9 @@ valueRange checkValueRange(float min, float max, float value, float tolerance,in
 	{
 		returnValue = checkMinMaxBreach(min,max,value);
 	}
-	else if(warningEnabled == 1)
+	else if(warningLevelOn == 1)
 	{
-		returnValue = checkWarning(minTolerance,minTolerance,value);
+		returnValue = checkWarning(minTolerance,maxTolerance,value);
 	}
 	
 	return returnValue;
