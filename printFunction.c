@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-
 #include "config.h"
 #include "checkLanguage.h"
 
-int LangType Language = ENGLISH;
+LangType Language = ENGLISH;
 
 void setPrintLanguage(LangType language)
 {
