@@ -9,4 +9,4 @@ typedef enum
 
 valueRange checkMinMaxBreach(float min, float max, float value);
 valueRange checkWarning(float minTolerance,float maxTolerance, float value);
-valueRange chackValueRange(float min, float max, float value, float tolerance,int warningLevelOn);
+valueRange checkValueRange(float min, float max, float value, float tolerance,int warningLevelOn);
