@@ -36,7 +36,7 @@ int checkChargeRateRange(float chargeRate, (void)(*printFunc)(int checkStatus), 
    int retStatus = 1;
    if(chargeRate > CHARGE_RATE_MAX_VALUE)
    {
-    printFunc(HIGH_VALUE_BREAH);
+    printFunc(HIGH_VALUE_BREACH);
     retStatus = 0;
    }
   return retStatus;
