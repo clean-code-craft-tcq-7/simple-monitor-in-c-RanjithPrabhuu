@@ -48,7 +48,7 @@ valueRange checkWarning(float minTolerance,float maxTolerance, float value)
 	return returnValue;
 }
 		
-valueRange chackValueRange(float min, float max, float value, float tolerance,int warningLevelOn)
+valueRange checkValueRange(float min, float max, float value, float tolerance,int warningLevelOn)
 {
 	valueRange returnValue = NORMAL;
 	
