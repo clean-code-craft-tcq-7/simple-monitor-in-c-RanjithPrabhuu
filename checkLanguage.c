@@ -41,14 +41,14 @@ char* ChargeRateMessageFrench[1] = {
 char* TemperatureMessageList[MAX_LANGUAGE_SUPRTD] = {
 	&TemperatureMessageEnglish,
 	&TemperatureMessageFrench,
-}
+};
 
 char* SOCMessageList[MAX_LANGUAGE_SUPRTD] = {
 	&SOCMessageEnglish,
 	&SOCMessageFrench,
-}
+};
 
 char* ChargeRateMessageList[MAX_LANGUAGE_SUPRTD] = {
 	&ChargeRateMessageEnglish,
 	&ChargeRateMessageFrench,
-}
+};
