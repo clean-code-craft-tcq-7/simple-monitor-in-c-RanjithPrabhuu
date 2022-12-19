@@ -18,7 +18,7 @@ char* SOCMessageEnglish[4] = {
 
 char* ChargeRateMessageEnglish[1] = {
 	"High Charge Rate Breach\n"
-}
+};
 
 char* TemperatureMessageFrench[4] = {
 	"Avertissement de basse température\n",
@@ -36,7 +36,7 @@ char* SOCMessageFrench[4] = {
 
 char* ChargeRateMessageFrench[1] = {
 	"Violation du taux de charge élevé\n"
-}
+};
 
 char* TemperatureMessageList[MAX_LANGUAGE_SUPRTD] = {
 	&TemperatureMessageEnglish,
