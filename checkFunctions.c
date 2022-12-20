@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "checkFunctions.h"
 #include "checkConfig.h"
+#include "checkFunctions.h"
+
 
 extern const char* breachMessage[MAX_MESSAGE];
 extern const char* warningMessage[MAX_WARNING];
