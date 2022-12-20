@@ -4,10 +4,6 @@
 #include "checker.h"
 #include "checkFunctions.h"
 
-extern const char* breachMessage[MAX_MESSAGE];
-extern const char* warningMessage[MAX_WARNING];
-extern const char* breachMessageLang[MAX_LANG][MAX_MESSAGE];
-
 int main() 
 {
   assert(batteryIsOk(25, 70, 0.7) == 1);
