@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include "checkFunctions.h"
 
-extern const char* breachMessage[MAX_MESSAGE];
-extern const char* warningMessage[MAX_WARNING];
-extern const char* breachMessageLang[MAX_LANG][MAX_MESSAGE];
-
 //Function that checks whether charge rate is in range 
 int checkChargeRate(float value)
 {
