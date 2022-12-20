@@ -1,8 +1,8 @@
 #include "checkConfig.h"
 
-const char* breachMessage[MAX_MESSAGE];
-const char* warningMessage[MAX_WARNING] = {"ReachingMinThreshold","ReachingMaxThreshold"};
-const char* breachMessageLang[MAX_LANG][MAX_MESSAGE] = 
+char* breachMessage[MAX_MESSAGE];
+char* warningMessage[MAX_WARNING] = {"ReachingMinThreshold","ReachingMaxThreshold"};
+char* breachMessageLang[MAX_LANG][MAX_MESSAGE] = 
 {
      {
 	     "LOW_SOC_WARNING",
