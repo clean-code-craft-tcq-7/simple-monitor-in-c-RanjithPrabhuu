@@ -2,9 +2,9 @@
 #include "checkFunctions.h"
 #include "checkConfig.h"
 
-extern const char* breachMessage[MAX_BREACH];
+extern const char* breachMessage[MAX_MESSAGE];
 extern const char* warningMessage[MAX_WARNING];
-extern const char* breachMessageLang[MAX_LANG][MAX_BREACH];
+extern const char* breachMessageLang[MAX_LANG][MAX_MESSAGE];
 
 //Function that checks whether charge rate is in range 
 int checkChargeRate(float value)
@@ -37,11 +37,11 @@ void setLanguage(langType Language)
 {   
    if(Language < MAX_LANG)
    {
-      for(int i =0;i<MAX_BREACH;i++)
-      {
-		breachMessage[i] = breachMessageLang[Language][i];
-      }
-    } 
+      	for(int i =0;i<MAX_MESSAGE;i++)
+      	{
+	   	breachMessage[i] = breachMessageLang[Language][i];
+      	}
+   } 
 }
 	
 	    
