@@ -8,11 +8,11 @@ int checkRange(float value,float minVal,float maxVal);
 //function to select the language type
 void checkLanguage(langType Language);
 //function definition for check warning level
-WarningLevel checkWarningLevel(int input, int MinValue , int MaxValue);
+warningLevel checkWarningLevel(int input, int MinValue , int MaxValue);
 //function definition to check battery health
 warningType checkBatteryHealth(int value,int min,int max);
 //function definition to check breach
 warningType checkBreach(int val,int min,int max);
 //function definition to check warning
-WarningType checkWarning(int val,int min,int max);
+warningType checkWarning(int val,int min,int max);
 
