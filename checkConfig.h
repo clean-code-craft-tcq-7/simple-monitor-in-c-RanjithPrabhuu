@@ -29,4 +29,7 @@ typedef enum {
     MAX_WARNING
 }warningLevel;
 
+extern char* breachMessage[MAX_MESSAGE];
+extern char* warningMessage[MAX_WARNING];
+extern char* breachMessageLang[MAX_LANG][MAX_MESSAGE];
 
