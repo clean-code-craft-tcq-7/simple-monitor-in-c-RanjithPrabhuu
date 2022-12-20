@@ -14,14 +14,14 @@ int main()
  
   checkLanguage(ENGLISH);
   printf("%s\n",breachMessage[2]);
-  assert(strcmp(breachMessage[(checkBatteryHealth(13,20,80))],"LOW_SOC_BREACH"));
+  assert(strcmp(breachMessage[(checkBatteryHealth(13,20,80))],"LOW_SOC_BREACH") == 0);
   checkLanguage(GERMAN);
-  assert(strcmp(breachMessage[(checkBatteryHealth(23,21,81))],"Niedrige SOC-Warnung"));
+  assert(strcmp(breachMessage[(checkBatteryHealth(23,21,81))],"Niedrige SOC-Warnung") == 0);
   
-  assert(strcmp(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)],"ReachingMinThreshold")); 
-  assert(strcmp(warningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)],"ReachingMaxThreshold"));
-  assert(strcmp(warningMessage[checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX )],"ReachingMinThreshold"));
-  assert(strcmp(warningMessage[checkWarningLevel(44,TEMPERATURE_MIN,TEMPERATURE_MIN)],"ReachingMaxThreshold"));
+  assert(strcmp(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)],"ReachingMinThreshold") == 0); 
+  assert(strcmp(warningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)],"ReachingMaxThreshold") == 0);
+  assert(strcmp(warningMessage[checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX )],"ReachingMinThreshold") == 0);
+  assert(strcmp(warningMessage[checkWarningLevel(44,TEMPERATURE_MIN,TEMPERATURE_MIN)],"ReachingMaxThreshold") == 0);
   
   return 0;
 }
