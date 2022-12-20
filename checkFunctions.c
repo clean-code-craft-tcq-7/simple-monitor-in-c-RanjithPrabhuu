@@ -3,6 +3,8 @@
 #include "checkValues.h"
 #include "config.h"
 
+
+
 //function to check whether temperature is in range or not
 int checkTemperatureRange(float temperature, (void)(*printFunc)(int checkStatus), int warningLevelOn)
 {
