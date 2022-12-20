@@ -1,7 +1,7 @@
 #include "checkConfig.h"
 
 const char* breachMessage[MAX_MESSAGE];
-const char* WarningMessage[MAX_WARNING] = {"ReachingMinThreshold","ReachingMaxThreshold"};
+const char* warningMessage[MAX_WARNING] = {"ReachingMinThreshold","ReachingMaxThreshold"};
 const char* breachMessageLang[MAX_LANG][MAX_MESSAGE] = 
 {
      {
