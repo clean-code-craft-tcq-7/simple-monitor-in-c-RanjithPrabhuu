@@ -1,6 +1,6 @@
-const char* breachMessage[MAX_BREACH];
+const char* breachMessage[MAX_MESSAGE];
 const char* WarningMessage[MAX_WARNING] = {"Approaching_discharge","Approaching_charge_peak"};
-const char* breachMessageLang[MAX_LANG][MAX_BREACH] = 
+const char* breachMessageLang[MAX_LANG][MAX_MESSAGE] = 
 {
      {
 	     "LOW_SOC_WARNING",
