@@ -33,7 +33,7 @@ int checkRange(float value,float minVal,float maxVal)
 }
 
 //function definition for check warning level
-WarningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
+warningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
 { 
     int Value = (int)((5*MaxValue)/100);   
     int minThreshold = MinValue + Value;
@@ -78,7 +78,7 @@ warningType checkBreach(int val,int min,int max)
 }
 
 //function definition to check warning
-WarningType checkWarning(int val,int min,int max)
+warningType checkWarning(int val,int min,int max)
 {
 	if(checkRange(val, min, max) == 1)
 	{
