@@ -6,5 +6,7 @@ int checkChargeRate(float value);
 //Function that checks whether input value is in range or not
 int checkRange(float value,float minVal,float maxVal);
 //function to select the language type
-void setLanguage(langType Language);
+void checkLanguage(langType Language);
+//function definition for check warning level
+WarningLevel checkWarningLevel(int input, int MinValue , int MaxValue);
 
