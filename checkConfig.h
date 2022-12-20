@@ -10,15 +10,15 @@ typedef enum
 {
     ENGLISH,
     GERMAN,
-	  MAX_LANG
+    MAX_LANG
 }langType;
 
 //enum for warning messages
 typedef enum {
     LOW_SOC_WARNING,
-	  HIGH_SOC_WARNING,
-	  LOW_SOC_BREACH,
-	  HIGH_SOC_BREACH,
-    MESSAGE_MAX
-} warningType;
+    HIGH_SOC_WARNING,
+    LOW_SOC_BREACH,
+    HIGH_SOC_BREACH,
+    MAX_BREACH
+}warningType;
 
