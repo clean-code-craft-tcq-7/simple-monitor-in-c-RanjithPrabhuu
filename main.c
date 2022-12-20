@@ -19,10 +19,10 @@ int main()
   checkLanguage(GERMAN);
   assert(breachMessage[(checkBatteryHealth(23,24,76))] == "Niedrige SOC-Warnung");
   
-  assert(WarningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)] == "ReachingMinThreshold"); // 5% of 80 is 4 , [20-24],[76-80]
-  assert(WarningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)] == "ReachingMaxThreshold");
-  assert(WarningMessage[checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX )] == "ReachingMinThreshold"); // 5% of 45 is 2 , [0-2],[43-45]
-  assert(WarningMessage[checkWarningLevel(44,TEMPERATURE_MIN,TEMPERATURE_MIN)] == "ReachingMaxThreshold");
+  assert(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)] == "ReachingMinThreshold"); // 5% of 80 is 4 , [20-24],[76-80]
+  assert(warningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)] == "ReachingMaxThreshold");
+  assert(warningMessage[checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX )] == "ReachingMinThreshold"); // 5% of 45 is 2 , [0-2],[43-45]
+  assert(warningMessage[checkWarningLevel(44,TEMPERATURE_MIN,TEMPERATURE_MIN)] == "ReachingMaxThreshold");
   
   return 0;
 }
