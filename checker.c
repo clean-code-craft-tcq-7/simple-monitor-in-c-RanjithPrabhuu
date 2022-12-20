@@ -2,7 +2,6 @@
 #include <assert.h>
 #include "checker.h"
 #include "checkFunctions.h"
-#include "checkConfig.h"
 
 //function declaration for battery is ok check 
 int batteryIsOk(float temperature, float soc, float chargeRate)
