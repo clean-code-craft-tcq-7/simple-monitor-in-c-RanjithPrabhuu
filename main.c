@@ -15,9 +15,9 @@ int main()
   assert(batteryIsOk(0, 0, 0.7) == 0);
  
   checkLanguage(ENGLISH);
-  assert(breachMessage[(checkBatteryHealth(77,24,76))] == "HIGH_SOC_WARNING");
+  assert(breachMessage[(checkBatteryHealth(13,21,81))] == "LOW_SOC_BREACH");
   checkLanguage(GERMAN);
-  assert(breachMessage[(checkBatteryHealth(23,24,76))] == "Niedrige SOC-Warnung");
+  assert(breachMessage[(checkBatteryHealth(23,21,81))] == "Niedrige SOC-Warnung");
   
   assert(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)] == "ReachingMinThreshold"); // 5% of 80 is 4 , [20-24],[76-80]
   assert(warningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)] == "ReachingMaxThreshold");
