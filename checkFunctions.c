@@ -49,7 +49,47 @@ WarningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
         return maxWarningLevel;
     }	
 }
+
+//function definition to check battery health
+warningType checkBatteryHealth(int value,int min,int max)
+{  
+    if(checkRange(value, min, max) == 1)
+    {
+	return checkWarning(value,min,max);
+    }
+    else
+    {
+	return checkBreach(value,min,max);
+    }
+}
 	
+//function definition to check breach
+warningType checkBreach(int val,int min,int max)
+{
+	if(checkRange(val, min, max) == 1)
+	{
+		return LOW_SOC_BREACH;
+	}
+	else
+	{
+		return HIGH_SOC_BREACH;
+	}
+	
+}
+
+//function definition to check warning
+WarningType checkWarning(int val,int min,int max)
+{
+	if(checkRange(val, min, max) == 1)
+	{
+		return LOW_SOC_WARNING;
+	}
+	else
+	{
+		return HIGH_SOC_WARNING;
+	}
+}
+
 //function definition to set the language
 void checkLanguage(langType Language)
 {   
