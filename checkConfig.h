@@ -22,3 +22,11 @@ typedef enum {
     MAX_MESSAGE
 }warningType;
 
+//enum for warning levels
+typedef enum {
+    minWarningLevel,
+    maxWarningLevel,
+    MAX_WARNING
+} WarningLevel;
+
+
