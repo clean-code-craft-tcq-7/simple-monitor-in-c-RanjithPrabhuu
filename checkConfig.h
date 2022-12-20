@@ -27,6 +27,6 @@ typedef enum {
     minWarningLevel,
     maxWarningLevel,
     MAX_WARNING
-} warningLevel;
+}warningLevel;
 
 
