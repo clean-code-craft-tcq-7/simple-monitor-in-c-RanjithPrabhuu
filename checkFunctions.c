@@ -32,9 +32,9 @@ int checkRange(float value,float minVal,float maxVal)
 }
 
 //function definition for check warning level
-warningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
+warningLevel checkWarningLevel(int input,int MinValue ,int MaxValue)
 { 
-    int Value = (int)((5*MaxValue)/100);   
+    int Value = (int)((5*MaxValue)/100);   //tolerance is kept as 5%
     int minThreshold = MinValue + Value;
     int maxThreshold  = MaxValue - Value;
 	
@@ -43,10 +43,11 @@ warningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
         return minWarningLevel;
     }
  
-    if( input>= maxThreshold)
+    if( input >= maxThreshold)
     {
         return maxWarningLevel;
     }	
+    return 0;		
 }
 
 //function definition to check battery health
