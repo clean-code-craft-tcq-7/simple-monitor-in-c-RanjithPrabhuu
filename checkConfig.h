@@ -19,6 +19,6 @@ typedef enum {
     HIGH_SOC_WARNING,
     LOW_SOC_BREACH,
     HIGH_SOC_BREACH,
-    MAX_BREACH
+    MAX_MESSAGE
 }warningType;
 
