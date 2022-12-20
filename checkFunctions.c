@@ -32,8 +32,26 @@ int checkRange(float value,float minVal,float maxVal)
     }
 }
 
-//function declaration to set the language
-void setLanguage(langType Language)
+//function definition for check warning level
+WarningLevel checkWarningLevel(int input, int MinValue , int MaxValue)
+{ 
+    int Value = (int)((5*MaxValue)/100);   
+    int minThreshold = MinValue + Value;
+    int maxThreshold  = MaxValue - Value;
+	
+    if(input <= minThreshold)	    
+    {
+        return minWarningLevel;
+    }
+ 
+    if( input>= maxThreshold)
+    {
+        return maxWarningLevel;
+    }	
+}
+	
+//function definition to set the language
+void checkLanguage(langType Language)
 {   
    if(Language < MAX_LANG)
    {
