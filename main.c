@@ -15,6 +15,7 @@ int main()
   assert(batteryIsOk(0, 0, 0.7) == 0);
  
   checkLanguage(ENGLISH);
+  printf("%s\n",breachMessage[2]);
   assert(breachMessage[(checkBatteryHealth(13,20,80))] == "LOW_SOC_BREACH");
   checkLanguage(GERMAN);
   assert(breachMessage[(checkBatteryHealth(23,21,81))] == "Niedrige SOC-Warnung");
