@@ -68,11 +68,11 @@ warningType checkBreach(int val,int min,int max)
 {
 	if(checkRange(val, min, max) == 1)
 	{
-		return LOW_SOC_BREACH;
+		return HIGH_SOC_BREACH;
 	}
 	else
 	{
-		return HIGH_SOC_BREACH;
+		return LOW_SOC_BREACH;
 	}
 	
 }
