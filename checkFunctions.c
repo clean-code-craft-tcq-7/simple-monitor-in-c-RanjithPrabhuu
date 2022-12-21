@@ -68,7 +68,7 @@ warningType checkBreach(int val,int min,int max)
 	{
 		return LOW_SOC_BREACH;
 	}
-	elseif(checkRange(val, min, max) == 2)
+	else if(checkRange(val, min, max) == 2)
 	{
 		return HIGH_SOC_BREACH;
 	}
@@ -82,7 +82,7 @@ warningType checkWarning(int val,int min,int max)
 	{
 		return LOW_SOC_WARNING;
 	}
-	elseif(checkRange(val, min, max) == 2)
+	else if(checkRange(val, min, max) == 2)
 	{
 		return HIGH_SOC_WARNING;
 	}
