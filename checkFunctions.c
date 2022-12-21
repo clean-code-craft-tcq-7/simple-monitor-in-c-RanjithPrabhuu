@@ -20,12 +20,13 @@ int checkRange(float value,float minVal,float maxVal)
     int ret = 1;
     if((value < minVal) 
     {
-	 return 0;
+	 ret = 0;
     }
     else if(value > maxVal)
     {
-	 return 2;  
+	 ret = 2; 
     }
+    return ret;
 }
 
 //function definition for check warning level
@@ -65,7 +66,7 @@ warningType checkBreach(int val,int min,int max)
 {
 	if(checkRange(val, min, max) == 0)
 	{
-		return low_SOC_BREACH;
+		return LOW_SOC_BREACH;
 	}
 	elseif(checkRange(val, min, max) == 2)
 	{
