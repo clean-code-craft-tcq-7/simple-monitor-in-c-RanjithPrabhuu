@@ -16,7 +16,7 @@ int main()
   checkWarningLevel(23,SOC_MIN ,SOC_MAX);
   assert(strcmp(breachMessage[(checkBatteryHealth(13,SOC_MIN,SOC_MIN,minThreshold,maxThreshold))],"LOW_BREACH") == 0);
   checkLanguage(GERMAN);
-  checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX);
+  checkWarningLevel(11,TEMPERATURE_MIN ,TEMPERATURE_MAX);
   assert(strcmp(breachMessage[(checkBatteryHealth(1,TEMPERATURE_MIN,TEMPERATURE_MAX,minThreshold,maxThreshold))],"Niedrige Warnung") == 0);
   
   assert(strcmp(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)],"ReachingMinThreshold") == 0); 
