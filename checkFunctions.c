@@ -17,13 +17,14 @@ int checkChargeRate(float value)
 //Function that checks whether input value is in range or not
 int checkRange(float value,float minVal,float maxVal)
 {
-    if((value < minVal) || (value > maxVal))
+    int ret = 1;
+    if((value < minVal) 
     {
 	 return 0;
     }
-    else
+    else if(value > maxVal)
     {
-	 return 1;  
+	 return 2;  
     }
 }
 
@@ -62,13 +63,13 @@ warningType checkBatteryHealth(int value,int min,int max)
 //function definition to check breach
 warningType checkBreach(int val,int min,int max)
 {
-	if(checkRange(val, min, max) == 1)
+	if(checkRange(val, min, max) == 0)
+	{
+		return low_SOC_BREACH;
+	}
+	elseif(checkRange(val, min, max) == 2)
 	{
 		return HIGH_SOC_BREACH;
-	}
-	else
-	{
-		return LOW_SOC_BREACH;
 	}
 	
 }
@@ -76,11 +77,11 @@ warningType checkBreach(int val,int min,int max)
 //function definition to check warning
 warningType checkWarning(int val,int min,int max)
 {
-	if(checkRange(val, min, max) == 1)
+	if(checkRange(val, min, max) == 0)
 	{
 		return LOW_SOC_WARNING;
 	}
-	else
+	elseif(checkRange(val, min, max) == 2)
 	{
 		return HIGH_SOC_WARNING;
 	}
