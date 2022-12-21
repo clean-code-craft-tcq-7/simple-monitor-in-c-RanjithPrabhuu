@@ -13,10 +13,11 @@ int main()
   assert(batteryIsOk(0, 0, 0.7) == 0);
  
   checkLanguage(ENGLISH);
-  printf("%s\n",breachMessage[2]);
-  assert(strcmp(breachMessage[(checkBatteryHealth(13,20,80))],"LOW_SOC_BREACH") == 0);
+  checkWarningLevel(23,SOC_MIN ,SOC_MAX)
+  assert(strcmp(breachMessage[(checkBatteryHealth(13,SOC_MIN,SOC_MIN,minThreshold,maxThreshold))],"LOW_BREACH") == 0);
   checkLanguage(GERMAN);
-  assert(strcmp(breachMessage[(checkBatteryHealth(23,21,81))],"Niedrige SOC-Warnung") == 0);
+  checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX);
+  assert(strcmp(breachMessage[(checkBatteryHealth(1,TEMPERATURE_MIN,TEMPERATURE_MAX,minThreshold,maxThreshold))],"Niedrige Warnung") == 0);
   
   assert(strcmp(warningMessage[checkWarningLevel(23,SOC_MIN ,SOC_MAX)],"ReachingMinThreshold") == 0); 
   assert(strcmp(warningMessage[checkWarningLevel(77,SOC_MIN,SOC_MAX)],"ReachingMaxThreshold") == 0);
