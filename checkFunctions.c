@@ -18,7 +18,7 @@ int checkChargeRate(float value)
 int checkRange(float value,float minVal,float maxVal)
 {
     int ret = 1;
-    if((value < minVal) 
+    if(value < minVal) 
     {
 	 ret = 0;
     }
