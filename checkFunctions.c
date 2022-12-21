@@ -55,11 +55,11 @@ warningType checkBatteryHealth(int value,int min,int max,minWarning,maxWarning)
 {  
     if(checkRange(value, min, max) == 1)
     {
-	return checkWarning(value,min,max);
+	return checkWarning(value,minWarning,maxWarning);
     }
     else
     {
-	return checkBreach(value,min,max);
+	return checkBreach(value,minWarning,minWarning);
     }
 }
 	
@@ -68,11 +68,11 @@ warningType checkBreach(int val,int min,int max)
 {
 	if(checkRange(val, min, max) == 0)
 	{
-		return LOW_SOC_BREACH;
+		return LOW_BREACH;
 	}
 	else if(checkRange(val, min, max) == 2)
 	{
-		return HIGH_SOC_BREACH;
+		return HIGH_BREACH;
 	}
 	
 }
@@ -82,11 +82,11 @@ warningType checkWarning(int val,int min,int max)
 {
 	if(checkRange(val, min, max) == 0)
 	{
-		return LOW_SOC_WARNING;
+		return LOW_WARNING;
 	}
 	else if(checkRange(val, min, max) == 2)
 	{
-		return HIGH_SOC_WARNING;
+		return HIGH_WARNING;
 	}
 }
 
