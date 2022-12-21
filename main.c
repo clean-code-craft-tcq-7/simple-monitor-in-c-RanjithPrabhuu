@@ -13,7 +13,7 @@ int main()
   assert(batteryIsOk(0, 0, 0.7) == 0);
  
   checkLanguage(ENGLISH);
-  checkWarningLevel(23,SOC_MIN ,SOC_MAX)
+  checkWarningLevel(23,SOC_MIN ,SOC_MAX);
   assert(strcmp(breachMessage[(checkBatteryHealth(13,SOC_MIN,SOC_MIN,minThreshold,maxThreshold))],"LOW_BREACH") == 0);
   checkLanguage(GERMAN);
   checkWarningLevel(1,TEMPERATURE_MIN ,TEMPERATURE_MAX);
