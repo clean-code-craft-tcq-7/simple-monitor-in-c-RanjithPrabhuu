@@ -15,10 +15,10 @@ typedef enum
 
 //enum for warning messages
 typedef enum {
-    LOW_SOC_WARNING,
-    HIGH_SOC_WARNING,
-    LOW_SOC_BREACH,
-    HIGH_SOC_BREACH,
+    LOW_WARNING,
+    HIGH_WARNING,
+    LOW_BREACH,
+    HIGH_BREACH,
     MAX_MESSAGE
 }warningType;
 
