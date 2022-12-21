@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include "checkConfig.h"
 
+extern int minThreshold,maxThreshold;
+
 //Function that checks whether charge rate is in range 
 int checkChargeRate(float value);
 //Function that checks whether input value is in range or not
