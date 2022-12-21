@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "checkFunctions.h"
 
+int minThreshold,maxThreshold;
+
 //Function that checks whether charge rate is in range 
 int checkChargeRate(float value)
 {
@@ -33,8 +35,8 @@ int checkRange(float value,float minVal,float maxVal)
 warningLevel checkWarningLevel(int input,int MinValue ,int MaxValue)
 { 
     int Value = (int)((5*MaxValue)/100);   //tolerance is kept as 5%
-    int minThreshold = MinValue + Value;
-    int maxThreshold  = MaxValue - Value;
+    minThreshold = MinValue + Value;
+    maxThreshold  = MaxValue - Value;
 	
     if(input <= minThreshold)	    
     {
@@ -49,7 +51,7 @@ warningLevel checkWarningLevel(int input,int MinValue ,int MaxValue)
 }
 
 //function definition to check battery health
-warningType checkBatteryHealth(int value,int min,int max)
+warningType checkBatteryHealth(int value,int min,int max,minWarning,maxWarning)
 {  
     if(checkRange(value, min, max) == 1)
     {
