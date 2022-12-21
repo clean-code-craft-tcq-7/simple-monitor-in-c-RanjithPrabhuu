@@ -12,7 +12,7 @@ void checkLanguage(langType Language);
 //function definition for check warning level
 warningLevel checkWarningLevel(int input, int MinValue , int MaxValue);
 //function definition to check battery health
-warningType checkBatteryHealth(int value,int min,int max,int minWarning,int maxWarning)
+warningType checkBatteryHealth(int value,int min,int max,int minWarning,int maxWarning);
 //function definition to check breach
 warningType checkBreach(int val,int min,int max);
 //function definition to check warning
