@@ -51,7 +51,7 @@ warningLevel checkWarningLevel(int input,int MinValue ,int MaxValue)
 }
 
 //function definition to check battery health
-warningType checkBatteryHealth(int value,int min,int max,minWarning,maxWarning)
+warningType checkBatteryHealth(int value,int min,int max,int minWarning,int maxWarning)
 {  
     if(checkRange(value, min, max) == 1)
     {
